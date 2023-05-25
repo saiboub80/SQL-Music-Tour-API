@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Band extends Model {
+  class Stageevent extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  Band.init({
+  Stageevent.init({
     band_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -37,10 +37,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    modelName: 'Band',
-    tableName: 'bands',
+    modelName: 'Stageevent',
+    tableName: 'stageevents',
     timestamps: false
   })
 
-  return Band;
+  return Stageevent;
 };
